@@ -114,6 +114,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="EdicionPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EdicionPro.Designer.cs">
+      <DependentUpon>EdicionPro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,12 @@
     <Compile Include="MetodoPago.Designer.cs">
       <DependentUpon>MetodoPago.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreacionPro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreacionPro.Designer.cs">
+      <DependentUpon>CreacionPro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Productos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +158,9 @@
     <Compile Include="Ventas.Designer.cs">
       <DependentUpon>Ventas.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EdicionPro.resx">
+      <DependentUpon>EdicionPro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MetodoPago.resx">
       <DependentUpon>MetodoPago.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreacionPro.resx">
+      <DependentUpon>CreacionPro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Productos.resx">
       <DependentUpon>Productos.cs</DependentUpon>
@@ -268,6 +286,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ventas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\atras.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
