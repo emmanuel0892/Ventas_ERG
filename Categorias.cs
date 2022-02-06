@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace Ventas_ERG
 {
-    public partial class Productos : Form
+    public partial class Categorias : Form
     {
-        public Productos()
+        public Categorias()
         {
             InitializeComponent();
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
             Hide();
-            
+            txtNomCat.Text = "";
         }
-        EdicionPro EditPro = new EdicionPro();
     }
 }

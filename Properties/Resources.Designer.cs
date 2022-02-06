@@ -193,6 +193,16 @@ namespace Ventas_ERG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap agregar3 {
+            get {
+                object obj = ResourceManager.GetObject("agregar3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap atras {
             get {
                 object obj = ResourceManager.GetObject("atras", resourceCulture);
@@ -233,9 +243,29 @@ namespace Ventas_ERG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap categorias {
+            get {
+                object obj = ResourceManager.GetObject("categorias", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cero {
             get {
                 object obj = ResourceManager.GetObject("cero", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar_sesion {
+            get {
+                object obj = ResourceManager.GetObject("cerrar-sesion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -256,6 +286,16 @@ namespace Ventas_ERG.Properties {
         internal static System.Drawing.Bitmap Eliminar {
             get {
                 object obj = ResourceManager.GetObject("Eliminar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap exit {
+            get {
+                object obj = ResourceManager.GetObject("exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -386,6 +426,16 @@ namespace Ventas_ERG.Properties {
         internal static System.Drawing.Bitmap punto {
             get {
                 object obj = ResourceManager.GetObject("punto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap reportes {
+            get {
+                object obj = ResourceManager.GetObject("reportes", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

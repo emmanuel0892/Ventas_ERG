@@ -323,6 +323,7 @@ namespace Ventas_ERG
 
         private void btnBuscarVendedor_Click(object sender, EventArgs e)
         {
+            btncancelar2.Hide();
             btnBuscarVendedor.Hide();
             txtCodigoV.Enabled = false;
             lbVendedor.Visible = true;
@@ -371,6 +372,11 @@ namespace Ventas_ERG
         private void txtCodigoP_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btncancelar2_Click(object sender, EventArgs e)
+        {
+            Hide();
         }
     }
 }

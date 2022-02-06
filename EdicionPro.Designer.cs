@@ -267,6 +267,7 @@
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Crimson;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelar.Location = new System.Drawing.Point(278, 648);
@@ -324,7 +325,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Gold;
+            this.pictureBox1.BackColor = System.Drawing.Color.ForestGreen;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1215, 744);

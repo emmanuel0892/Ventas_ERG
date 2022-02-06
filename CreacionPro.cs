@@ -131,5 +131,14 @@ namespace Ventas_ERG
         {
 
         }
+
+        private void btnAgreCat_Click(object sender, EventArgs e)
+        {
+            cat.TopLevel = true;
+            cat.Show();
+            cat.BringToFront();
+            cat.TopMost = true;
+        }
+        Categorias cat = new Categorias();
     }
 }

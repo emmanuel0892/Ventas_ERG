@@ -19,9 +19,14 @@ namespace Ventas_ERG
             btnNuevoUs.Hide();
             btnEditUs.Hide();
             btnEliminarUs.Hide();
+
             btnNuevoPro.Hide();
             btnEditPro.Hide();
             btnEliminarPro.Hide();
+
+            btnNuevCat.Hide();
+            btnEditCat.Hide();
+            btnElimCat.Hide();
 
             btnAtras.Hide();
         }
@@ -37,6 +42,23 @@ namespace Ventas_ERG
         }
         private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
+            btnUsuarios.Show();
+            btnProductos.Show();
+            btnCat.Show();
+
+            btnNuevoUs.Hide();
+            btnEditUs.Hide();
+            btnEliminarUs.Hide();
+
+            btnNuevoPro.Hide();
+            btnEditPro.Hide();
+            btnEliminarPro.Hide();
+
+            btnNuevCat.Hide();
+            btnEditCat.Hide();
+            btnElimCat.Hide();
+
+            btnAtras.Hide();
             
             V.TopLevel = false;
             V.Dock = DockStyle.Fill;
@@ -53,11 +75,17 @@ namespace Ventas_ERG
             btnEditPro.Show();
             btnEliminarPro.Show();
             btnAtras.Show();
+
+            btnCat.Hide();
+            btnNuevCat.Hide();
+            btnEditCat.Hide();
+            btnElimCat.Hide();
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
             btnProductos.Hide();
+            btnCat.Hide();
 
             btnNuevoUs.Show();
             btnEditUs.Show();
@@ -67,6 +95,10 @@ namespace Ventas_ERG
             btnNuevoPro.Hide();
             btnEditPro.Hide();
             btnEliminarPro.Hide();
+
+            btnNuevCat.Hide();
+            btnEditCat.Hide();
+            btnElimCat.Hide();
         }
 
         private void btnNuevoPro_Click(object sender, EventArgs e)
@@ -76,6 +108,8 @@ namespace Ventas_ERG
             CreacionPro.Parent = panel2;
             CreacionPro.Show();
             CreacionPro.BringToFront();
+
+            btnCat.Show();
 
             btnAtras.Hide();
 
@@ -103,9 +137,47 @@ namespace Ventas_ERG
             btnEditPro.Hide();
             btnEliminarPro.Hide();
             btnAtras.Hide();
+            btnNuevCat.Hide();
+            btnEditCat.Hide();
+            btnElimCat.Hide();
 
             btnUsuarios.Show();
             btnProductos.Show();
+            btnCat.Show();
         }
+
+        private void btnCerrarP_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnCat_Click(object sender, EventArgs e)
+        {
+            btnNuevCat.Show();
+            btnEditCat.Show();
+            btnElimCat.Show();
+            btnAtras.Show();
+
+            btnNuevoUs.Hide();
+            btnEditUs.Hide();
+            btnEliminarUs.Hide();
+
+            btnNuevoPro.Hide();
+            btnEditPro.Hide();
+            btnEliminarPro.Hide();
+        }
+
+        private void btnNuevCat_Click(object sender, EventArgs e)
+        {
+            cat.TopLevel = true;
+            cat.Show();
+            cat.BringToFront();
+            cat.TopMost = true;
+
+            btnNuevCat.Hide();
+            btnEditCat.Hide();
+            btnElimCat.Hide();
+        }
+        Categorias cat = new Categorias();
     }
 }
