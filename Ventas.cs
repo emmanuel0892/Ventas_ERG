@@ -150,6 +150,7 @@ namespace Ventas_ERG
             string Columna    = "*";
             string Tabla      = "PRODUCTOS";
             string Condicion = "id_pro = " + codP;
+            string var = "";
 
             if (txtCodigoP.Text != "")
             {
@@ -165,7 +166,6 @@ namespace Ventas_ERG
 
                     MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
                     reader = cmd.ExecuteReader();
-                    Conexion.cerrarConexion();
 
                     //Validamo que la variable retorne información
                     if (reader == null)
@@ -178,9 +178,25 @@ namespace Ventas_ERG
                         //Recorremos la variable y la le asignamos a los textbox la información que requerimos
                         while (reader.Read())
                         {
-                            txtProducto.Text = reader.GetString(1);
-                            txtTipoP.Text = reader.GetString(2);
+                            txtProducto.Text = reader.GetString(2);
+                            var = reader.GetString(3);
                         }
+
+                        string columna = "NOM_CAT";
+                        string tabla = "CATEGORIAS";
+                        string condicion = "ID_CAT = " + "'"+var+"'";
+
+                        string sql2 = Conexion.selectSql(columna, tabla, condicion);
+                        MySqlDataReader read = null;
+                        MySqlCommand comando = new MySqlCommand(sql2, Conexion.obtConexion());
+                        read = comando.ExecuteReader();
+                        while (read.Read())
+                        {
+                            txtTipoP.Text = read.GetString(0);
+                        }
+                        Conexion.cerrarConexion();
+
+                        //SELECT CATEGORIAS.NOM_CAT FROM PRODUCTOS INNER JOIN CATEGORIAS ON PRODUCTOS.CAT = CATEGORIAS.ID_CAT WHERE CATEGORIAS.ID_CAT = '1';
                     }
 
                 }
@@ -377,6 +393,71 @@ namespace Ventas_ERG
         private void btncancelar2_Click(object sender, EventArgs e)
         {
             Hide();
+        }
+
+        private void txtCodigoP_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                //Creacion de variables para guardar los datos de la consulta sql
+                string codP = (txtCodigoP.Text);
+                string Columna = "*";
+                string Tabla = "PRODUCTOS";
+                string Condicion = "COD_PRO = " + codP;
+                string var = "";
+
+                //Llamamos a la clase conexión para generar la consulta y le damos los parametros (columna,tabla y condicion)
+                //declarados anteriormente
+                string sql = Conexion.selectSql(Columna, Tabla, Condicion);
+                Conexion.obtConexion();
+
+                try
+                {
+                    //Creamos una variable de tipo MySql para guardar los datos que nos devuelve la consulta
+                    MySqlDataReader reader = null;
+
+                    MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
+                    reader = cmd.ExecuteReader();
+                    Conexion.cerrarConexion();
+
+                    //Validamo que la variable retorne información
+                    if (reader == null)
+                    {
+                        MessageBox.Show("Error, el producto no existe!");
+                        txtCodigoP.Focus();
+                    }
+                    else
+                    {
+                        //Recorremos la variable y la le asignamos a los textbox la información que requerimos
+                        while (reader.Read())
+                        {
+                            txtProducto.Text = reader.GetString(2);
+                            var = reader.GetString(3);
+                        }
+
+                        string columna = "NOM_CAT";
+                        string tabla = "CATEGORIAS";
+                        string condicion = "ID_CAT = " + var;
+
+                        string sql2 = Conexion.selectSql(columna, tabla, condicion);
+                        MySqlDataReader read = null;
+                        MySqlCommand comando = new MySqlCommand(sql2,Conexion.obtConexion());
+                        read = comando.ExecuteReader();
+                        while (read.Read())
+                        {
+                            txtTipoP.Text = read.GetString(0);
+                        }
+                        Conexion.cerrarConexion();
+                    }
+
+                }
+                //realizamos un control de excepción para MySql
+                catch (MySqlException ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+        
         }
     }
 }

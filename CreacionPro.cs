@@ -16,7 +16,7 @@ namespace Ventas_ERG
         public CreacionPro()
         {
             InitializeComponent();
-            txtCodPro.Focus();
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -55,12 +55,17 @@ namespace Ventas_ERG
 
                 string val1 = (txtCodPro.Text);
                 string val2 = (txtNomPro.Text);
-                string val3 = (cbCat.Text);
                 string val4 = (cbUniMed.Text);
                 string val5 = (txtStock.Text);
                 string val6 = (txtPrecio.Text);
                 string val7 = (txtIVA.Text);
                 string val8 = (txtPreIVA.Text);
+
+                string cb = (cbCat.Text);
+                string tab2 = "CATEGORIAS";
+                string col  = "ID_CAT";
+                string con  = "NOM_CAT = " + "'" + cb + "'";
+                string idc = "";
 
 
                 if (txtNomPro.Text != "" && cbCat.Text != "" && cbUniMed.Text != "" &&
@@ -69,7 +74,20 @@ namespace Ventas_ERG
                 {
                     try
                     {
-                        string sql = Conexion.insertSql(tab, v1, val1, val2, val3, val4, val5, val6, val7, val8);
+                        MySqlDataReader reader = null;
+                        string sql2 = Conexion.selectSql(col,tab2,con);
+                        MySqlCommand cmd2 = new MySqlCommand(sql2, Conexion.obtConexion());
+                        reader = cmd2.ExecuteReader();
+                        while (reader.Read())
+                        {
+                            idc = reader.GetString(0);
+                        }
+
+                        MessageBox.Show(idc);
+                        Conexion.cerrarConexion();
+
+
+                        string sql = Conexion.insertSql(tab, v1, val1, val2, idc, val4, val5, val6, val7, val8);
                         MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
                         Conexion.obtConexion();
                         cmd.ExecuteNonQuery();
@@ -135,10 +153,46 @@ namespace Ventas_ERG
         private void btnAgreCat_Click(object sender, EventArgs e)
         {
             cat.TopLevel = true;
-            cat.Show();
+            cat.ShowDialog();
             cat.BringToFront();
             cat.TopMost = true;
+            recargar_cbCategoria();
         }
         Categorias cat = new Categorias();
+
+        public void recargar_cbCategoria()
+        {
+            string col = "NOM_CAT";
+            string tab = "CATEGORIAS";
+
+            string sql = Conexion.selectSql2(col, tab);
+            MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
+            Conexion.obtConexion();
+            MySqlDataReader reader = cmd.ExecuteReader();
+            cbCat.Items.Clear();
+
+            while (reader.Read())
+            {
+                cbCat.Items.Add(reader[col].ToString());
+            }
+            Conexion.cerrarConexion();
+        }
+
+        private void CreacionPro_Load(object sender, EventArgs e)
+        {
+            string col = "NOM_CAT";
+            string tab = "CATEGORIAS";
+
+            string sql = Conexion.selectSql2(col, tab);
+            MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
+            Conexion.obtConexion();
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
+            {
+                cbCat.Items.Add(reader[col].ToString());
+            }
+            Conexion.cerrarConexion();
+        }
     }
 }

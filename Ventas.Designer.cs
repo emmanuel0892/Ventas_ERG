@@ -145,6 +145,7 @@
             this.txtCodigoP.TabIndex = 17;
             this.txtCodigoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCodigoP.TextChanged += new System.EventHandler(this.txtCodigoP_TextChanged);
+            this.txtCodigoP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtCodigoP_KeyDown);
             this.txtCodigoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoP_KeyPress);
             // 
             // txtCodigoV

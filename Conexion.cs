@@ -40,7 +40,7 @@ namespace Ventas_ERG
         //metodo para generar diversas consultas select
         public static string selectSql(string Columnas, string Tabla, string Condicion)
         {
-            string sql = "SELECT " + Columnas + " FROM " + Tabla + " WHERE " + Condicion + ";";
+            string sql = "SELECT " + Columnas + " FROM " + Tabla + " WHERE (" + Condicion + ");";
             return sql;
         }
 
@@ -51,11 +51,28 @@ namespace Ventas_ERG
 
         }
 
+        public static string selectSql3(string Columnas, string Tabla, string Condicion)
+        {
+            string sql = "SELECT " + Columnas + " FROM " + Tabla + Condicion + ";";
+            return sql;
+        }
+
         //metodo para insertar datos en las tablas de la base de datos
         public static string insertSql(string Tabla, string Val0, string Val1, string Val2,
                                        string Val3, string Val4, string Val5, string Val6, string Val7,string Val8)
         {
             string sql = "INSERT INTO "+Tabla+" ("+Val0+") VALUES ('" +Val1+ "','" + Val2+ "','" + Val3 + "','"+ Val4 + "','"+ Val5 + "','"+ Val6 + "','"+ Val7 + "','"+ Val8 + "');";
+            return sql;
+        }
+
+        public static string inser2tSql(string Tabla, string Val0, string Val1)
+        {
+            string sql = "INSERT INTO " + Tabla + " (" + Val0 + ") VALUES ('" + Val1 + "');";
+            return sql;
+        }
+        public static string inser3tSql(string Tabla, string Val0, string Val1)
+        {
+            string sql = "INSERT INTO " + Tabla + " (" + Val0 + ") VALUES ('" + Val1 + "');";
             return sql;
         }
     }

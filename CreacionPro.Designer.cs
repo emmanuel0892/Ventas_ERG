@@ -85,7 +85,7 @@
             this.txtNomPro.Location = new System.Drawing.Point(348, 181);
             this.txtNomPro.Name = "txtNomPro";
             this.txtNomPro.Size = new System.Drawing.Size(218, 24);
-            this.txtNomPro.TabIndex = 2;
+            this.txtNomPro.TabIndex = 1;
             // 
             // label1
             // 
@@ -119,7 +119,7 @@
             this.txtStock.Multiline = true;
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(56, 27);
-            this.txtStock.TabIndex = 5;
+            this.txtStock.TabIndex = 4;
             this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
@@ -140,7 +140,7 @@
             this.cbUniMed.Location = new System.Drawing.Point(348, 302);
             this.cbUniMed.Name = "cbUniMed";
             this.cbUniMed.Size = new System.Drawing.Size(121, 21);
-            this.cbUniMed.TabIndex = 4;
+            this.cbUniMed.TabIndex = 3;
             this.cbUniMed.SelectedIndexChanged += new System.EventHandler(this.cbUniMed_SelectedIndexChanged);
             // 
             // txtPrecio
@@ -150,7 +150,7 @@
             this.txtPrecio.Location = new System.Drawing.Point(348, 420);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(138, 24);
-            this.txtPrecio.TabIndex = 6;
+            this.txtPrecio.TabIndex = 5;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
@@ -172,7 +172,7 @@
             this.txtIVA.Location = new System.Drawing.Point(348, 481);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.Size = new System.Drawing.Size(138, 24);
-            this.txtIVA.TabIndex = 7;
+            this.txtIVA.TabIndex = 6;
             this.txtIVA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
@@ -194,7 +194,7 @@
             this.txtPreIVA.Location = new System.Drawing.Point(348, 539);
             this.txtPreIVA.Name = "txtPreIVA";
             this.txtPreIVA.Size = new System.Drawing.Size(138, 24);
-            this.txtPreIVA.TabIndex = 8;
+            this.txtPreIVA.TabIndex = 7;
             this.txtPreIVA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
@@ -227,7 +227,7 @@
             this.cbCat.Location = new System.Drawing.Point(348, 240);
             this.cbCat.Name = "cbCat";
             this.cbCat.Size = new System.Drawing.Size(121, 21);
-            this.cbCat.TabIndex = 3;
+            this.cbCat.TabIndex = 2;
             // 
             // label8
             // 
@@ -296,7 +296,7 @@
             this.txtCodPro.Location = new System.Drawing.Point(348, 130);
             this.txtCodPro.Name = "txtCodPro";
             this.txtCodPro.Size = new System.Drawing.Size(218, 26);
-            this.txtCodPro.TabIndex = 1;
+            this.txtCodPro.TabIndex = 0;
             this.txtCodPro.TextChanged += new System.EventHandler(this.txtCodPro_TextChanged);
             this.txtCodPro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodPro_KeyPress);
             // 
@@ -346,6 +346,7 @@
             this.Name = "CreacionPro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Productos";
+            this.Load += new System.EventHandler(this.CreacionPro_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
