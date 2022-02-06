@@ -463,6 +463,16 @@ namespace Ventas_ERG.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tesoreria {
+            get {
+                object obj = ResourceManager.GetObject("tesoreria", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap usuario1 {
             get {
                 object obj = ResourceManager.GetObject("usuario1", resourceCulture);
