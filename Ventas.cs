@@ -452,9 +452,9 @@ namespace Ventas_ERG
 
                 }
                 //realizamos un control de excepción para MySql
-                catch (MySqlException ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.ToString());
+                    MessageBox.Show("El producto no existe!!!");
                 }
             }
         

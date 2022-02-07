@@ -40,7 +40,7 @@ namespace Ventas_ERG
             string col1 = "COUNT(*)";
             string tab1 = "CATEGORIAS";
 
-            string sql1 = Conexion.selectSql2(col1,tab1);
+            string sql1 = Conexion.selectSql2(col1, tab1);
             Conexion.obtConexion();
             MySqlCommand cmd1 = new MySqlCommand(sql1, Conexion.obtConexion());
             int resul = Convert.ToInt32(cmd1.ExecuteScalar());
@@ -63,8 +63,8 @@ namespace Ventas_ERG
 
                 string cb = (cbCat.Text);
                 string tab2 = "CATEGORIAS";
-                string col  = "ID_CAT";
-                string con  = "NOM_CAT = " + "'" + cb + "'";
+                string col = "ID_CAT";
+                string con = "NOM_CAT = " + "'" + cb + "'";
                 string idc = "";
 
 
@@ -75,7 +75,7 @@ namespace Ventas_ERG
                     try
                     {
                         MySqlDataReader reader = null;
-                        string sql2 = Conexion.selectSql(col,tab2,con);
+                        string sql2 = Conexion.selectSql(col, tab2, con);
                         MySqlCommand cmd2 = new MySqlCommand(sql2, Conexion.obtConexion());
                         reader = cmd2.ExecuteReader();
                         while (reader.Read())
@@ -83,7 +83,6 @@ namespace Ventas_ERG
                             idc = reader.GetString(0);
                         }
 
-                        MessageBox.Show(idc);
                         Conexion.cerrarConexion();
 
 
@@ -112,8 +111,17 @@ namespace Ventas_ERG
                 MessageBox.Show("Antes de Ingresar Productos, debe crear las categorías", "Precaución",
                                 MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
-            
+
+            txtCodPro.Text = "";
+            txtNomPro.Text = "";
+            cbCat.ResetText();
+            cbUniMed.ResetText();
+            txtStock.Text = "";
+            txtPrecio.Text = "";
+            txtIVA.Text = "";
+            txtPreIVA.Text = "";
+
+            Hide();
         }
 
         private void txtCodPro_KeyPress(object sender, KeyPressEventArgs e)

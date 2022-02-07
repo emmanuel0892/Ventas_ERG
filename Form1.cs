@@ -16,6 +16,10 @@ namespace Ventas_ERG
         public Principal()
         {
             InitializeComponent();
+
+            timer1.Enabled = true;
+
+
             //botones de Venta
             btnVenN.Hide();
             btnNotaCre.Hide();
@@ -74,13 +78,13 @@ namespace Ventas_ERG
 
             btnAtras.Show();
 
-            btnUsuarios.Hide();
-            btnProductos.Hide();
-            btnCat.Hide();
-            btnReportes.Hide();
-            btnTeso.Hide();
+            btnUsuarios.Location = new System.Drawing.Point(1,260);
+            btnProductos.Location = new System.Drawing.Point(1, 348);
+            btnCat.Location = new System.Drawing.Point(1, 435);
+            btnReportes.Location = new System.Drawing.Point(1, 523);
+            btnTeso.Location = new System.Drawing.Point(1, 611);
 
-            btnAtras.Location = new System.Drawing.Point(1, 230);
+            btnAtras.Location = new System.Drawing.Point(1, 205);
 
             //botones de Usuarios
             btnNuevoUs.Hide();
@@ -112,27 +116,64 @@ namespace Ventas_ERG
 
         private void btnProductos_Click(object sender, EventArgs e)
         {
+            btnVenta.Location = new System.Drawing.Point(1, 0);
+            btnUsuarios.Location = new System.Drawing.Point(1, 89);
+            btnProductos.Location = new System.Drawing.Point(1, 178);
+            btnCat.Location = new System.Drawing.Point(1, 425);
+            btnReportes.Location = new System.Drawing.Point(1, 513);
+            btnTeso.Location = new System.Drawing.Point(1, 601);
+
+            btnAtras.Location = new System.Drawing.Point(1, 370);
+            btnAtras.Show();
+
+            //botones de Venta
+            btnVenN.Hide();
+            btnNotaCre.Hide();
+            btnGuiaDes.Hide();
+            btnNotaDeb.Hide();
+
+            //botones de Usuarios
+            btnNuevoUs.Hide();
+            btnEditUs.Hide();
+            btnEliminarUs.Hide();
+
+            //botones de Productos
             btnNuevoPro.Show();
             btnEditPro.Show();
             btnEliminarPro.Show();
-            btnAtras.Show();
 
-            btnCat.Hide();
-
+            //botones de Categorías
             btnNuevCat.Hide();
             btnEditCat.Hide();
             btnElimCat.Hide();
+
+            //botones de Reportes
+            btnRepoF.Hide();
+            btnRepoV.Hide();
+            btnRepoComi.Hide();
+            btnRepoMer.Hide();
+
+            //botones de Tesorería
+            btnApeCaja.Hide();
+            btnReti.Hide();
+            btnDepo.Hide();
+            btnCierrC.Hide();
         }
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
-            btnProductos.Hide();
-            btnCat.Hide();
-            btnAtras.Location = new Point(1, 280);
+            btnVenta.Location = new System.Drawing.Point(1, 0);
+            btnUsuarios.Location = new System.Drawing.Point(1, 89);
+            btnProductos.Location = new System.Drawing.Point(1, 320);
+            btnCat.Location = new System.Drawing.Point(1, 408);
+            btnReportes.Location = new System.Drawing.Point(1, 496);
+            btnTeso.Location = new System.Drawing.Point(1, 584);
+            btnAtras.Location = new Point(1, 265);
 
-            btnReportes.Hide();
-            btnCat.Hide();
-            btnTeso.Hide();
+            btnVenN.Hide();
+            btnNotaCre.Hide();
+            btnGuiaDes.Hide();
+            btnNotaDeb.Hide();
 
             btnNuevoUs.Show();
             btnEditUs.Show();
@@ -156,17 +197,31 @@ namespace Ventas_ERG
             CreacionPro.Show();
             CreacionPro.BringToFront();
 
+            txtFechaHora.BringToFront();
+
+            btnVenta.Show();
+            btnVenta.Location = new Point(1, 0);
+
+            btnUsuarios.Show();
+            btnUsuarios.Location = new Point(1, 89);
+
+            btnProductos.Show();
+            btnProductos.Location = new Point(1, 178);
+
             btnCat.Show();
+            btnCat.Location = new Point(1, 267);
+
+            btnReportes.Show();
+            btnReportes.Location = new Point(1, 356);
+
+            btnTeso.Show();
+            btnTeso.Location = new Point(1, 445);
 
             btnAtras.Hide();
 
             btnNuevoPro.Hide();
             btnEditPro.Hide();
             btnEliminarPro.Hide();
-
-            btnNuevoUs.Hide();
-            btnEditUs.Hide();
-            btnEliminarUs.Hide();
         }
         CreacionPro CreacionPro = new CreacionPro();
 
@@ -213,13 +268,27 @@ namespace Ventas_ERG
             //boton para retroceder en los menu
             btnAtras.Hide();
 
+            btnVenta.Show();
+            btnVenta.Location = new Point(1, 0);
+
             btnUsuarios.Show();
+            btnUsuarios.Location = new Point(1, 89);
+
             btnProductos.Show();
+            btnProductos.Location = new Point(1, 178);
+
             btnCat.Show();
+            btnCat.Location = new Point(1, 267);
+
             btnReportes.Show();
+            btnReportes.Location = new Point(1, 356);
+
             btnTeso.Show();
+            btnTeso.Location = new Point(1, 445);
 
             btnAtras.Location = new Point(1, 649);
+
+            btnCerrarP.Location = new Point(1, 704);
         }
 
         private void btnCerrarP_Click(object sender, EventArgs e)
@@ -229,18 +298,58 @@ namespace Ventas_ERG
 
         private void btnCat_Click(object sender, EventArgs e)
         {
+            btnVenta.Show();
+            btnVenta.Location = new Point(1, 0);
+
+            btnUsuarios.Show();
+            btnUsuarios.Location = new Point(1, 89);
+
+            btnProductos.Show();
+            btnProductos.Location = new Point(1, 178);
+
+            btnCat.Show();
+            btnCat.Location = new Point(1, 267);
+
+            btnReportes.Show();
+            btnReportes.Location = new Point(1, 512);
+
+            btnTeso.Location = new Point(1, 600);
+
+            btnAtras.Location = new Point(1, 458);
+
+
             btnNuevCat.Show();
             btnEditCat.Show();
             btnElimCat.Show();
             btnAtras.Show();
 
+            //botones de Venta
+            btnVenN.Hide();
+            btnNotaCre.Hide();
+            btnGuiaDes.Hide();
+            btnNotaDeb.Hide();
+
+            //botones de Usuarios
             btnNuevoUs.Hide();
             btnEditUs.Hide();
             btnEliminarUs.Hide();
 
+            //botones de Productos
             btnNuevoPro.Hide();
             btnEditPro.Hide();
             btnEliminarPro.Hide();
+
+            //botones de Reportes
+            btnRepoF.Hide();
+            btnRepoV.Hide();
+            btnRepoComi.Hide();
+            btnRepoMer.Hide();
+
+            //botones de Tesorería
+            btnApeCaja.Hide();
+            btnReti.Hide();
+            btnDepo.Hide();
+            btnCierrC.Hide();
         }
 
         private void btnNuevCat_Click(object sender, EventArgs e)
@@ -253,6 +362,26 @@ namespace Ventas_ERG
             btnNuevCat.Hide();
             btnEditCat.Hide();
             btnElimCat.Hide();
+
+            txtFechaHora.BringToFront();
+
+            btnVenta.Show();
+            btnVenta.Location = new Point(1, 0);
+
+            btnUsuarios.Show();
+            btnUsuarios.Location = new Point(1, 89);
+
+            btnProductos.Show();
+            btnProductos.Location = new Point(1, 178);
+
+            btnCat.Show();
+            btnCat.Location = new Point(1, 267);
+
+            btnReportes.Show();
+            btnReportes.Location = new Point(1, 356);
+
+            btnTeso.Show();
+            btnTeso.Location = new Point(1, 445);
         }
         Categorias cat = new Categorias();
 
@@ -268,7 +397,164 @@ namespace Ventas_ERG
             V.Parent = panel2;
             V.Show();
             V.BringToFront();
+
+            txtFechaHora.BringToFront();
+
+            //botones de Venta
+            btnVenN.Hide();
+            btnNotaCre.Hide();
+            btnGuiaDes.Hide();
+            btnNotaDeb.Hide();
+
+            btnVenta.Show();
+            btnVenta.Location = new Point(1, 0);
+
+            btnUsuarios.Show();
+            btnUsuarios.Location = new Point(1, 89);
+
+            btnProductos.Show();
+            btnProductos.Location = new Point(1, 178);
+
+            btnCat.Show();
+            btnCat.Location = new Point(1, 267);
+
+            btnReportes.Show();
+            btnReportes.Location = new Point(1, 356);
+
+            btnTeso.Show();
+            btnTeso.Location = new Point(1, 445);
         }
         Ventas V = new Ventas();
+
+        private void btnReportes_Click(object sender, EventArgs e)
+        {
+            btnVenta.Show();
+            btnVenta.Location = new Point(1, 0);
+
+            btnUsuarios.Show();
+            btnUsuarios.Location = new Point(1, 89);
+
+            btnProductos.Show();
+            btnProductos.Location = new Point(1, 178);
+
+            btnCat.Show();
+            btnCat.Location = new Point(1, 267);
+
+            btnReportes.Show();
+            btnReportes.Location = new Point(1, 356);
+            
+            btnTeso.Show();
+            btnTeso.Location = new Point(1, 616);
+
+            btnAtras.Show();
+            btnAtras.Location = new Point(1, 562);
+
+            btnCerrarP.Location = new Point(1, 706);
+
+            //botones de Venta
+            btnVenN.Hide();
+            btnNotaCre.Hide();
+            btnGuiaDes.Hide();
+            btnNotaDeb.Hide();
+
+            //botones de Usuarios
+            btnNuevoUs.Hide();
+            btnEditUs.Hide();
+            btnEliminarUs.Hide();
+
+            //botones de Productos
+            btnNuevoPro.Hide();
+            btnEditPro.Hide();
+            btnEliminarPro.Hide();
+
+            //botones de Categorías
+            btnNuevCat.Hide();
+            btnEditCat.Hide();
+            btnElimCat.Hide();
+
+            //botones de Reportes
+            btnRepoF.Show();
+            btnRepoV.Show();
+            btnRepoComi.Show();
+            btnRepoMer.Show();
+
+            //botones de Tesorería
+            btnApeCaja.Hide();
+            btnReti.Hide();
+            btnDepo.Hide();
+            btnCierrC.Hide();
+        }
+
+        private void btnTeso_Click(object sender, EventArgs e)
+        {
+            btnVenta.Show();
+            btnVenta.Location = new Point(1, 0);
+
+            btnUsuarios.Show();
+            btnUsuarios.Location = new Point(1, 89);
+
+            btnProductos.Show();
+            btnProductos.Location = new Point(1, 178);
+
+            btnCat.Show();
+            btnCat.Location = new Point(1, 267);
+
+            btnReportes.Show();
+            btnReportes.Location = new Point(1, 356);
+
+            btnTeso.Show();
+            btnTeso.Location = new Point(1, 445);
+
+            btnAtras.Show();
+            btnAtras.Location = new Point(1, 648);
+
+            //botones de Venta
+            btnVenN.Hide();
+            btnNotaCre.Hide();
+            btnGuiaDes.Hide();
+            btnNotaDeb.Hide();
+
+            //botones de Usuarios
+            btnNuevoUs.Hide();
+            btnEditUs.Hide();
+            btnEliminarUs.Hide();
+
+            //botones de Productos
+            btnNuevoPro.Hide();
+            btnEditPro.Hide();
+            btnEliminarPro.Hide();
+
+            //botones de Categorías
+            btnNuevCat.Hide();
+            btnEditCat.Hide();
+            btnElimCat.Hide();
+
+            //botones de Reportes
+            btnRepoF.Hide();
+            btnRepoV.Hide();
+            btnRepoComi.Hide();
+            btnRepoMer.Hide();
+
+            //botones de Tesorería
+            btnApeCaja.Show();
+            btnReti.Show();
+            btnDepo.Show();
+            btnCierrC.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            txtFechaHora.Text = DateTime.Now.ToString("U");
+        }
+
+        private void lbHora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtFechaHora_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
