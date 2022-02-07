@@ -405,6 +405,7 @@ namespace Ventas_ERG
                 string Tabla = "PRODUCTOS";
                 string Condicion = "COD_PRO = " + codP;
                 string var = "";
+                string var2 = "";
 
                 //Llamamos a la clase conexión para generar la consulta y le damos los parametros (columna,tabla y condicion)
                 //declarados anteriormente
@@ -432,12 +433,27 @@ namespace Ventas_ERG
                         while (reader.Read())
                         {
                             txtProducto.Text = reader.GetString(2);
+                            txtStock.Text = reader.GetString(5);
                             var = reader.GetString(3);
+                            var2 = reader.GetString(4);
                         }
 
                         string columna = "NOM_CAT";
                         string tabla = "CATEGORIAS";
                         string condicion = "ID_CAT = " + var;
+
+                        string columna2 = "NOM_UNI_MED";
+                        string tabla2 = "UNIDAD_MEDIDA";
+                        string condicion2 = "ID_UNI_MED = " + var2;
+
+                        string sql3 = Conexion.selectSql(columna2,tabla2,condicion2);
+                        MySqlDataReader read2 = null;
+                        MySqlCommand comando2 = new MySqlCommand(sql3, Conexion.obtConexion());
+                        read2 = comando2.ExecuteReader();
+                        while (read2.Read())
+                        {
+                            txtUmedida.Text = read2.GetString(0);
+                        }
 
                         string sql2 = Conexion.selectSql(columna, tabla, condicion);
                         MySqlDataReader read = null;

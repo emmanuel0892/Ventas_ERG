@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGuardarV = new System.Windows.Forms.Button();
             this.btnRecuperarV = new System.Windows.Forms.Button();
@@ -199,10 +199,10 @@
             // txtCantidadP
             // 
             this.txtCantidadP.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidadP.Location = new System.Drawing.Point(432, 140);
+            this.txtCantidadP.Location = new System.Drawing.Point(382, 140);
             this.txtCantidadP.Multiline = true;
             this.txtCantidadP.Name = "txtCantidadP";
-            this.txtCantidadP.Size = new System.Drawing.Size(58, 27);
+            this.txtCantidadP.Size = new System.Drawing.Size(78, 27);
             this.txtCantidadP.TabIndex = 23;
             this.txtCantidadP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -212,7 +212,7 @@
             this.lbCantidad.BackColor = System.Drawing.Color.Transparent;
             this.lbCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCantidad.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbCantidad.Location = new System.Drawing.Point(343, 144);
+            this.lbCantidad.Location = new System.Drawing.Point(293, 144);
             this.lbCantidad.Name = "lbCantidad";
             this.lbCantidad.Size = new System.Drawing.Size(91, 20);
             this.lbCantidad.TabIndex = 22;
@@ -223,7 +223,7 @@
             this.txtStock.BackColor = System.Drawing.Color.White;
             this.txtStock.Enabled = false;
             this.txtStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStock.Location = new System.Drawing.Point(755, 140);
+            this.txtStock.Location = new System.Drawing.Point(768, 140);
             this.txtStock.Multiline = true;
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(58, 27);
@@ -236,7 +236,7 @@
             this.lbStock.BackColor = System.Drawing.Color.Transparent;
             this.lbStock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbStock.Location = new System.Drawing.Point(692, 144);
+            this.lbStock.Location = new System.Drawing.Point(705, 144);
             this.lbStock.Name = "lbStock";
             this.lbStock.Size = new System.Drawing.Size(65, 20);
             this.lbStock.TabIndex = 24;
@@ -250,7 +250,7 @@
             this.txtTipoP.Location = new System.Drawing.Point(76, 141);
             this.txtTipoP.Multiline = true;
             this.txtTipoP.Name = "txtTipoP";
-            this.txtTipoP.Size = new System.Drawing.Size(245, 27);
+            this.txtTipoP.Size = new System.Drawing.Size(204, 27);
             this.txtTipoP.TabIndex = 27;
             this.txtTipoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -271,10 +271,10 @@
             this.txtUmedida.BackColor = System.Drawing.Color.White;
             this.txtUmedida.Enabled = false;
             this.txtUmedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUmedida.Location = new System.Drawing.Point(608, 140);
+            this.txtUmedida.Location = new System.Drawing.Point(564, 140);
             this.txtUmedida.Multiline = true;
             this.txtUmedida.Name = "txtUmedida";
-            this.txtUmedida.Size = new System.Drawing.Size(58, 27);
+            this.txtUmedida.Size = new System.Drawing.Size(135, 27);
             this.txtUmedida.TabIndex = 29;
             this.txtUmedida.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -284,7 +284,7 @@
             this.lbUmedida.BackColor = System.Drawing.Color.Transparent;
             this.lbUmedida.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUmedida.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbUmedida.Location = new System.Drawing.Point(510, 144);
+            this.lbUmedida.Location = new System.Drawing.Point(466, 144);
             this.lbUmedida.Name = "lbUmedida";
             this.lbUmedida.Size = new System.Drawing.Size(100, 20);
             this.lbUmedida.TabIndex = 28;
@@ -308,9 +308,9 @@
             // 
             // colProducto
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.colProducto.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.colProducto.DefaultCellStyle = dataGridViewCellStyle1;
             this.colProducto.HeaderText = "PRODUCTO";
             this.colProducto.Name = "colProducto";
             this.colProducto.ReadOnly = true;
@@ -319,8 +319,8 @@
             // 
             // colTipo
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colTipo.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colTipo.DefaultCellStyle = dataGridViewCellStyle2;
             this.colTipo.HeaderText = "TIPO";
             this.colTipo.Name = "colTipo";
             this.colTipo.ReadOnly = true;
@@ -329,8 +329,8 @@
             // 
             // colUmedida
             // 
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colUmedida.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colUmedida.DefaultCellStyle = dataGridViewCellStyle3;
             this.colUmedida.HeaderText = "U. MEDIDA";
             this.colUmedida.Name = "colUmedida";
             this.colUmedida.ReadOnly = true;
@@ -339,8 +339,8 @@
             // 
             // colPrecio
             // 
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colPrecio.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colPrecio.DefaultCellStyle = dataGridViewCellStyle4;
             this.colPrecio.HeaderText = "PRECIO";
             this.colPrecio.Name = "colPrecio";
             this.colPrecio.ReadOnly = true;
@@ -348,8 +348,8 @@
             // 
             // colCantidad
             // 
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colCantidad.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colCantidad.DefaultCellStyle = dataGridViewCellStyle5;
             this.colCantidad.HeaderText = "CANTIDAD";
             this.colCantidad.Name = "colCantidad";
             this.colCantidad.ReadOnly = true;
@@ -357,8 +357,8 @@
             // 
             // colSubT
             // 
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.colSubT.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.colSubT.DefaultCellStyle = dataGridViewCellStyle6;
             this.colSubT.HeaderText = "SUB TOTAL";
             this.colSubT.Name = "colSubT";
             this.colSubT.ReadOnly = true;

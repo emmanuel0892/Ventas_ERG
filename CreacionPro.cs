@@ -55,7 +55,6 @@ namespace Ventas_ERG
 
                 string val1 = (txtCodPro.Text);
                 string val2 = (txtNomPro.Text);
-                string val4 = (cbUniMed.Text);
                 string val5 = (txtStock.Text);
                 string val6 = (txtPrecio.Text);
                 string val7 = (txtIVA.Text);
@@ -67,6 +66,11 @@ namespace Ventas_ERG
                 string con = "NOM_CAT = " + "'" + cb + "'";
                 string idc = "";
 
+                string cb2 = (cbUniMed.Text);
+                string tab3 = "UNIDAD_MEDIDA";
+                string col2 = "ID_UNI_MED";
+                string con2 = "NOM_UNI_MED = " + "'" + cb2 + "'";
+                string idu = "";
 
                 if (txtNomPro.Text != "" && cbCat.Text != "" && cbUniMed.Text != "" &&
                    txtStock.Text != "" && txtPrecio.Text != "" && txtIVA.Text != "" &&
@@ -78,15 +82,26 @@ namespace Ventas_ERG
                         string sql2 = Conexion.selectSql(col, tab2, con);
                         MySqlCommand cmd2 = new MySqlCommand(sql2, Conexion.obtConexion());
                         reader = cmd2.ExecuteReader();
+
                         while (reader.Read())
                         {
                             idc = reader.GetString(0);
                         }
 
+                        MySqlDataReader reader2 = null;
+                        string sql3 = Conexion.selectSql(col2,tab3,con2);
+                        MySqlCommand cmd3 = new MySqlCommand(sql3, Conexion.obtConexion());
+                        reader2 = cmd3.ExecuteReader();
+
+                        while (reader2.Read())
+                        {
+                            idu = reader2.GetString(0);
+                        }
+
                         Conexion.cerrarConexion();
 
 
-                        string sql = Conexion.insertSql(tab, v1, val1, val2, idc, val4, val5, val6, val7, val8);
+                        string sql = Conexion.insertSql(tab, v1, val1, val2, idc, idu, val5, val6, val7, val8);
                         MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
                         Conexion.obtConexion();
                         cmd.ExecuteNonQuery();
@@ -164,42 +179,71 @@ namespace Ventas_ERG
             cat.ShowDialog();
             cat.BringToFront();
             cat.TopMost = true;
-            recargar_cbCategoria();
+            recargar_cb();
         }
         Categorias cat = new Categorias();
 
-        public void recargar_cbCategoria()
+        public void recargar_cb()
         {
             string col = "NOM_CAT";
             string tab = "CATEGORIAS";
+
+            string col2 = "NOM_UNI_MED";
+            string tab2 = "UNIDAD_MEDIDA";
 
             string sql = Conexion.selectSql2(col, tab);
             MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
             Conexion.obtConexion();
             MySqlDataReader reader = cmd.ExecuteReader();
-            cbCat.Items.Clear();
+
+            string sql2 = Conexion.selectSql2(col2, tab2);
+            MySqlCommand cmd2 = new MySqlCommand(sql2, Conexion.obtConexion());
+            Conexion.obtConexion();
+            MySqlDataReader reader2 = cmd2.ExecuteReader();
 
             while (reader.Read())
             {
                 cbCat.Items.Add(reader[col].ToString());
             }
+
+            while (reader2.Read())
+            {
+                cbUniMed.Items.Add(reader2[col2].ToString());
+            }
+
             Conexion.cerrarConexion();
         }
+
+
 
         private void CreacionPro_Load(object sender, EventArgs e)
         {
             string col = "NOM_CAT";
             string tab = "CATEGORIAS";
 
+            string col2 = "NOM_UNI_MED";
+            string tab2 = "UNIDAD_MEDIDA";
+
             string sql = Conexion.selectSql2(col, tab);
             MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
             Conexion.obtConexion();
             MySqlDataReader reader = cmd.ExecuteReader();
 
+            string sql2 = Conexion.selectSql2(col2, tab2);
+            MySqlCommand cmd2 = new MySqlCommand(sql2, Conexion.obtConexion());
+            Conexion.obtConexion();
+            MySqlDataReader reader2 = cmd2.ExecuteReader();
+
             while (reader.Read())
             {
                 cbCat.Items.Add(reader[col].ToString());
             }
+
+            while (reader2.Read())
+            {
+                cbUniMed.Items.Add(reader2[col2].ToString());
+            }
+
             Conexion.cerrarConexion();
         }
     }
