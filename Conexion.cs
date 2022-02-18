@@ -57,7 +57,7 @@ namespace Ventas_ERG
             return sql;
         }
 
-        //metodo para insertar datos en las tablas de la base de datos
+        //metodos para insertar datos en las tablas de la base de datos
         public static string insertSql(string Tabla, string Val0, string Val1, string Val2,
                                        string Val3, string Val4, string Val5, string Val6, string Val7,string Val8)
         {
@@ -73,6 +73,13 @@ namespace Ventas_ERG
         public static string inser3tSql(string Tabla, string Val0, string Val1)
         {
             string sql = "INSERT INTO " + Tabla + " (" + Val0 + ") VALUES ('" + Val1 + "');";
+            return sql;
+        }
+
+        //metodos para actualizar registros de la base de datos
+        public static string updateSql(string tabla, string valores)
+        {
+            string sql = "UPDATE " + tabla + " SET " + valores + ";";
             return sql;
         }
     }

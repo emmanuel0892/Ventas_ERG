@@ -464,6 +464,7 @@ namespace Ventas_ERG
                             txtTipoP.Text = read.GetString(0);
                         }
                         Conexion.cerrarConexion();
+
                     }
 
                 }

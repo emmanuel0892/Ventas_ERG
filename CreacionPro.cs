@@ -186,29 +186,16 @@ namespace Ventas_ERG
         public void recargar_cb()
         {
             string col = "NOM_CAT";
-            string tab = "CATEGORIAS";
-
-            string col2 = "NOM_UNI_MED";
-            string tab2 = "UNIDAD_MEDIDA";
+            string tab = "CATEGORIAS";           
 
             string sql = Conexion.selectSql2(col, tab);
             MySqlCommand cmd = new MySqlCommand(sql, Conexion.obtConexion());
             Conexion.obtConexion();
             MySqlDataReader reader = cmd.ExecuteReader();
-
-            string sql2 = Conexion.selectSql2(col2, tab2);
-            MySqlCommand cmd2 = new MySqlCommand(sql2, Conexion.obtConexion());
-            Conexion.obtConexion();
-            MySqlDataReader reader2 = cmd2.ExecuteReader();
-
+            cbCat.Items.Clear();
             while (reader.Read())
             {
                 cbCat.Items.Add(reader[col].ToString());
-            }
-
-            while (reader2.Read())
-            {
-                cbUniMed.Items.Add(reader2[col2].ToString());
             }
 
             Conexion.cerrarConexion();

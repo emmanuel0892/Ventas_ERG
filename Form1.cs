@@ -227,8 +227,40 @@ namespace Ventas_ERG
 
         private void btnEditPro_Click(object sender, EventArgs e)
         {
+            edicion.TopLevel = false;
+            edicion.Dock = DockStyle.Fill;
+            edicion.Parent = panel2;
+            edicion.Show();
+            edicion.BringToFront();
 
+            txtFechaHora.BringToFront();
+
+            btnVenta.Show();
+            btnVenta.Location = new Point(1, 0);
+
+            btnUsuarios.Show();
+            btnUsuarios.Location = new Point(1, 89);
+
+            btnProductos.Show();
+            btnProductos.Location = new Point(1, 178);
+
+            btnCat.Show();
+            btnCat.Location = new Point(1, 267);
+
+            btnReportes.Show();
+            btnReportes.Location = new Point(1, 356);
+
+            btnTeso.Show();
+            btnTeso.Location = new Point(1, 445);
+
+            btnAtras.Hide();
+
+            btnNuevoPro.Hide();
+            btnEditPro.Hide();
+            btnEliminarPro.Hide();
         }
+
+        EdicionPro edicion = new EdicionPro();
 
         private void btnAtras_Click(object sender, EventArgs e)
         {
